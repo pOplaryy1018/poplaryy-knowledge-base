@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>poplaryy · 技术知识库</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark">p.</span><span>poplaryy</span></div>
+    <nav aria-label="主导航">
+      <button type="button" data-page="home" class="active">首页</button>
+      <button type="button" data-page="knowledge">知识库</button>
+    </nav>
+    <span class="header-note">公开技术笔记</span>
+  </header>
+
+  <main>
+    <section id="home" class="page active" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">一个能快速找到答案的地方</p>
+          <h1 id="home-title">知识有序，<br><span>表达从容。</span></h1>
+          <p>整理后端、数据库与 Go 知识点，回看面试问题，让每次学习都有迹可循。</p>
+          <button type="button" class="primary" data-go="knowledge">进入知识库 <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="hero-panel" aria-hidden="true"><span>poplaryy / library</span><div class="orbit"><i></i><i></i><i></i></div><strong>思考，归档，继续前进。</strong></div>
+      </div>
+      <div class="overview">
+        <button type="button" data-go="knowledge"><span>知识库专区</span><strong id="note-count">—</strong><small>笔记与面试问题</small></button>
+      </div>
+      <div class="section-heading"><div><p class="eyebrow">最近更新</p><h2>继续阅读</h2></div><button type="button" class="text-button" data-go="knowledge">查看全部 ↗</button></div>
+      <div id="recent-list" class="recent-list"></div>
+    </section>
+
+    <section id="knowledge" class="page" aria-labelledby="knowledge-title">
+      <div class="page-heading"><p class="eyebrow">Knowledge</p><h1 id="knowledge-title">知识库专区</h1><p>搜索知识点，按分类与标签缩小范围，展开面试题答案。</p></div>
+      <div class="toolbar"><label class="search-box"><span>⌕</span><input id="knowledge-search" type="search" placeholder="搜索标题、正文或标签" autocomplete="off"></label><select id="category-filter" aria-label="按分类筛选"><option value="">全部分类</option></select><select id="tag-filter" aria-label="按标签筛选"><option value="">全部标签</option></select></div>
+      <div class="library-layout"><div id="knowledge-list" class="knowledge-list"></div><article id="knowledge-detail" class="reading-panel"><div class="empty">选择一篇笔记开始阅读</div></article></div>
+    </section>
+  </main>
+  <footer>poplaryy <span>用清晰的结构，保存持续积累的价值。</span></footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
